@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root{
+    --verydarkgrey : #18171F;
+    --darkgrey : #24232C;
+    --grey : #817D92;
+    --almostwhite :#E6E5EA ;
+    --green : #A4FFAF;
+    --red : #F64A4A;
+    --orange : #FB7C58;
+    --yellow : #F8CD65;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: 26.1875em) {
+        font-size: 52.5%;
+        }
+
+    @media only screen and (max-width: 21.5625em) {
+        font-size: 40%;
+        }
+
+    @media only screen and (max-height: 41.875em) {
+        font-size: 52.5%;
+        }
+
+    
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--verydarkgrey);
+    color: var(--almostwhite);
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.header{
+    color: var(--grey);
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+
+.passGenerated{
+  width: 100%;
+  max-width: 54rem;
+   background-color: var(--darkgrey);
+    padding: 3rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    
+    .password{
+        color: var(--grey);
+        font-weight: 700;
+        font-size: 3.2rem;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+
+        .copy{
+            // display: none;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        svg{
+            cursor: pointer;
+            &:hover{
+                path{
+                    fill : var(--almostwhite)
+                }
+            }
+        }
+    }
+}
+
+.pass{
+    width: 100%;
+    max-width: 54rem;
+    height: 52.8rem;
+    background-color: var(--darkgrey);
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .passLength{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        p{
+            font-size: 1.8rem;
+        }
+
+        .charsetOutput{
+            font-size: 3.2rem;
+            color: var(--green);
+        }
+    }
+
+    .range{
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: var(--verydarkgrey);
+        height: .8rem;
+        border: none;
+        outline: none;
+        &::-webkit-slider-thumb{
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: var(--almostwhite);
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--verydarkgrey);
+                border: 1px solid var(--green);
+            }
+        }
+    }
+
+    .passOption{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .option{
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+
+            input{    
+                width: 2rem;
+                height: 2rem;
+                appearance: none;
+                border: solid 2px var(--almostwhite);
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+
+               &:checked{
+                   background-color: var(--green);
+                   border: solid 2px var(--green);
+               }
+
+              &::after{
+                    display: none;
+                    font-family: 'Font Awesome 5 free';
+                    content: '\f00c';
+                    font-weight: 900;
+                    color: var(--verydarkgrey);
+                }
+
+                &:checked:after{
+                    display: block;
+                }
+
+
+            }
+            output{
+                font-size: 1.8rem;
+            }
+            
+        }
+    }
+
+    .passCheck{
+        height: 7.2rem;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--verydarkgrey);
+
+        p{
+            font-size: 1.8rem;
+            color: var(--grey);
+            font-weight: 700;
+        }
+
+        .strengthChart{
+            width: 6.35rem;
+           height: 3.1rem;
+        }
+
+    }
+
+    .submit{
+        height: 6.5rem;
+        background-color: var(--green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        
+        div{
+            width: 12.211rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            p{
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: var(--verydarkgrey);
+            }
+        }  
+        
+        &:hover{
+            transition: all 0.3s ease ;
+            background-color: var(--darkgrey);
+            outline: .2rem solid var(--green);
+            outline-offset:  -.2rem ;
+            
+            div{
+                
+                
+                p{
+                    color: var(--green);
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+
+                svg{
+                    path{
+                        fill: var(--green);
+                    }
+                }
+            }
+            }
+    }
+}
+
+
+

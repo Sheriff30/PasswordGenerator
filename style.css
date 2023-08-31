@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --verydarkgrey: #18171F;
+  --darkgrey: #24232C;
+  --grey: #817D92;
+  --almostwhite:#E6E5EA ;
+  --green: #A4FFAF;
+  --red: #F64A4A;
+  --orange: #FB7C58;
+  --yellow: #F8CD65;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 26.1875em) {
+  html {
+    font-size: 52.5%;
+  }
+}
+@media only screen and (max-width: 21.5625em) {
+  html {
+    font-size: 40%;
+  }
+}
+@media only screen and (max-height: 41.875em) {
+  html {
+    font-size: 52.5%;
+  }
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--verydarkgrey);
+  color: var(--almostwhite);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header {
+  color: var(--grey);
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.passGenerated {
+  width: 100%;
+  max-width: 54rem;
+  background-color: var(--darkgrey);
+  padding: 3rem;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.passGenerated .password {
+  color: var(--grey);
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+.passGenerated div {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.passGenerated div .copy {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--green);
+}
+.passGenerated div svg {
+  cursor: pointer;
+}
+.passGenerated div svg:hover path {
+  fill: var(--almostwhite);
+}
+
+.pass {
+  width: 100%;
+  max-width: 54rem;
+  height: 52.8rem;
+  background-color: var(--darkgrey);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pass .passLength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pass .passLength p {
+  font-size: 1.8rem;
+}
+.pass .passLength .charsetOutput {
+  font-size: 3.2rem;
+  color: var(--green);
+}
+.pass .range {
+  width: 100%;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--verydarkgrey);
+  height: 0.8rem;
+  border: none;
+  outline: none;
+}
+.pass .range::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--almostwhite);
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pass .range::-webkit-slider-thumb:hover {
+  background-color: var(--verydarkgrey);
+  border: 1px solid var(--green);
+}
+.pass .passOption {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.pass .passOption .option {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+.pass .passOption .option input {
+  width: 2rem;
+  height: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: solid 2px var(--almostwhite);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pass .passOption .option input:checked {
+  background-color: var(--green);
+  border: solid 2px var(--green);
+}
+.pass .passOption .option input::after {
+  display: none;
+  font-family: "Font Awesome 5 free";
+  content: "\f00c";
+  font-weight: 900;
+  color: var(--verydarkgrey);
+}
+.pass .passOption .option input:checked:after {
+  display: block;
+}
+.pass .passOption .option output {
+  font-size: 1.8rem;
+}
+.pass .passCheck {
+  height: 7.2rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verydarkgrey);
+}
+.pass .passCheck p {
+  font-size: 1.8rem;
+  color: var(--grey);
+  font-weight: 700;
+}
+.pass .passCheck .strengthChart {
+  width: 6.35rem;
+  height: 3.1rem;
+}
+.pass .submit {
+  height: 6.5rem;
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.pass .submit div {
+  width: 12.211rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pass .submit div p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--verydarkgrey);
+}
+.pass .submit:hover {
+  transition: all 0.3s ease;
+  background-color: var(--darkgrey);
+  outline: 0.2rem solid var(--green);
+  outline-offset: -0.2rem;
+}
+.pass .submit:hover div p {
+  color: var(--green);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.pass .submit:hover div svg path {
+  fill: var(--green);
+}/*# sourceMappingURL=style.css.map */
