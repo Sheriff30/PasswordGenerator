@@ -77,5 +77,5 @@ copybtn.addEventListener("click", function () {
 
   setTimeout(function () {
     copy.classList.add("hide");
-  }, 3000);
+  }, 1500);
 });
