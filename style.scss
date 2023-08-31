@@ -87,10 +87,10 @@ body{
         gap: 1.6rem;
 
         .copy{
-            // display: none;
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--green);
+                transition: all .3s ease;
         }
 
         svg{
@@ -268,3 +268,7 @@ body{
 
 
 
+.hide{
+    visibility: hidden;
+    opacity: 0;
+}

@@ -86,6 +86,7 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--green);
+  transition: all 0.3s ease;
 }
 .passGenerated div svg {
   cursor: pointer;
@@ -227,4 +228,9 @@ body {
 }
 .pass .submit:hover div svg path {
   fill: var(--green);
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */
