@@ -33,7 +33,6 @@ const sliderEvent = function () {
 
 ////////////////////////////////
 const reset = function () {
-  copy.classList.add("hide");
   slider.value = 0;
   const x = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
   sliderVal.textContent = "0";
@@ -75,4 +74,8 @@ submitBTN.addEventListener("click", function () {
 copybtn.addEventListener("click", function () {
   copy.classList.remove("hide");
   navigator.clipboard.writeText(password);
+
+  setTimeout(function () {
+    copy.classList.add("hide");
+  }, 3000);
 });
