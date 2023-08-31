@@ -176,7 +176,7 @@ body {
 .pass .passOption .option input:checked:after {
   display: block;
 }
-.pass .passOption .option output {
+.pass .passOption .option label {
   font-size: 1.8rem;
 }
 .pass .passCheck {
