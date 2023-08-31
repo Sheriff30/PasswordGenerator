@@ -10,7 +10,7 @@ slider.addEventListener("mousemove", function () {
   // value change
   sliderVal.textContent = this.value;
 });
-slider.addEventListener("click", function () {
+slider.addEventListener("change", function () {
   // Progress bar
   const x = ((this.value - this.min) / (this.max - this.min)) * 100;
   console.log(x);
