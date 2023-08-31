@@ -24,8 +24,7 @@ const sliderEvent = function () {
 
   if (Svalue <= 4) strengthChart.src = "assets/images/tooweak.svg";
   if (Svalue > 4 && Svalue <= 6) strengthChart.src = "assets/images/weak.svg";
-  if (Svalue > 6 && Svalue <= 8)
-    strengthChart.src = "assets/images/medium.svg";
+  if (Svalue > 6 && Svalue <= 8) strengthChart.src = "assets/images/medium.svg";
   if (Svalue > 8 && Svalue <= 12)
     strengthChart.src = "assets/images/strong.svg";
 
@@ -39,7 +38,7 @@ const reset = function () {
   const x = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
   sliderVal.textContent = "0";
   strengthChart.style.width = "6.35rem";
-  strengthChart.src = "/assets/images/empty.svg";
+  strengthChart.src = "assets/images/empty.svg";
   slider.style.background = `linear-gradient(90deg , rgb(24,23,31) ${x}% , rgb(24,23,31) ${x}%)`;
   checkbox.forEach((e) => {
     e.checked = false;
