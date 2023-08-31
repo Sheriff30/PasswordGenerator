@@ -22,12 +22,12 @@ const sliderEvent = function () {
   sliderVal.textContent = this.value;
   let Svalue = slider.value;
 
-  if (Svalue <= 4) strengthChart.src = "/assets/images/tooweak.svg";
-  if (Svalue > 4 && Svalue <= 6) strengthChart.src = "/assets/images/weak.svg";
+  if (Svalue <= 4) strengthChart.src = "assets/images/tooweak.svg";
+  if (Svalue > 4 && Svalue <= 6) strengthChart.src = "assets/images/weak.svg";
   if (Svalue > 6 && Svalue <= 8)
-    strengthChart.src = "/assets/images/medium.svg";
+    strengthChart.src = "assets/images/medium.svg";
   if (Svalue > 8 && Svalue <= 12)
-    strengthChart.src = "/assets/images/strong.svg";
+    strengthChart.src = "assets/images/strong.svg";
 
   strengthChart.style.width = "16.65rem";
 };
